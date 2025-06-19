@@ -170,17 +170,16 @@ PRELOAD=function(callback){return async function(){
 		}
 	}
 		
-	if (!App)
+	/*if (!App)
 	{
 		Game.firstClick=false;
 		AddEvent(window,'click',function(initMusic){return function(){
 			if (Game.firstClick) return;
 			Game.firstClick=true;
 			initMusic();
-			PlayCue('launch');
 		}}(initMusic));
 	}
-	else initMusic();
+	else */initMusic();
 	
 	callback();
 }};
