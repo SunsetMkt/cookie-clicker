@@ -1977,7 +1977,7 @@ Game.Launch=function()
 		Game.bounds=0;//rectangle defining screen limits (right,left,bottom,top) updated every logic frame
 		
 		TopBarOffset=32;
-		if (!App) Game.wrapper.classList.add('onWeb');
+		if (!true) Game.wrapper.classList.add('onWeb');
 		else {Game.wrapper.classList.add('offWeb');TopBarOffset=0;}
 		
 		if (Game.mobile==1)
