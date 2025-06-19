@@ -11812,7 +11812,11 @@ Game.Launch=function()
 				if (id>=Game.jukebox.tracks.length) id=0;
 				else if (id<0) id=Game.jukebox.tracks.length-1;
 				Game.jukebox.onTrack=id;
-				var data=Music.tracks[Game.jukebox.tracks[Game.jukebox.onTrack]].audio;
+				try {
+					var data=Music.tracks[Game.jukebox.tracks[Game.jukebox.onTrack]].audio;
+				} catch {
+					var data=undefined;
+				}
 				if (l('jukeboxOnTrack'))
 				{
 					triggerAnim(l('jukeboxPlayer'),'pucker');
